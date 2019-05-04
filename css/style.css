@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.visual {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #E0E0E0;
+}
+
+.vs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px;
+    width: 100%;
+    height: 88%;
+}
+
+header {
+    margin: 15px auto;
+    width: 60%;
+    height: 60px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+}
+
+header nav ul {
+    display: flex;
+    margin-left: 30px;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    margin: 0 30px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Nanum Pen Script', cursive;
+    cursor: pointer;
+}
+
+header nav ul li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.vs-container .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3.2%;
+    padding: 200px;
+    width: 80%;
+    height: 80%;
+    background-color: #66BB6A;
+    border: 15px solid #E0E0E0;
+    border-radius: 10px;
+}
+
+.vs-intro-img {
+    width: 330px;
+    height: 330px;
+}
+
+.vs-intro-img img {
+    width: 330px;
+    height: 330px;
+}
+
+.vs-intro-text .intro-name {
+    font-size: 4.5rem;
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: bold;
+    color: #212121;
+    margin-bottom: 10px;
+}
+
+.vs-intro-text .intro-text {
+    font-size: 2rem;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #eaeaea;
+}
+
+.introduce {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #E0F7FA;
+}
+
+.myskill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F4C3;
+}
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 80%;
+    height: 60%;
+    margin-bottom: 70px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.photofolio {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #C5E1A5;
+}
+
+.bg_white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+}
+
+.bg_white p {
+    letter-spacing: 5px;
+    font-size: 2rem;
+    font-family: 'Gothic A1', sans-serif;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
