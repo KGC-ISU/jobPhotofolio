@@ -1,0 +1,50 @@
+class App {
+    constructor() {
+
+        let list = document.querySelectorAll(".canvas-list .box");
+
+        console.log(list);
+
+        this.cardList = [];
+
+        list.forEach(x => {
+            let p = x.dataset.percent;
+            let c = x.querySelector("canvas");
+            this.cardList.push(new Card(c, p));
+        });
+
+        this.isDrawed = false;
+        this.p = document.querySelector(".skill");
+        console.log(this.p.offsetTop);
+        window.addEventListener("scroll", this.scrollHandle.bind(this));
+
+    }
+
+    scrollHandle(e) {
+        if (window.scrollY + window.innerHeight >= this.p.offsetTop + 100 && !this.isDrawed) {
+            this.draw();
+            this.isDrawed = true;
+        }
+    }
+
+    draw() {
+        this.cardList.forEach(x => x.start());
+    }
+
+}
+
+window.onload = function () {
+    let app = new App();
+}
+
+function dunfa() {
+    window.open("https://github.com/KGC-ISU/dunfanet");
+}
+
+function copySite() {
+    window.open("http://www.gmsgondr.net/exhibition/1/kjm/index.html");
+}
+
+function git() {
+    window.open("https://github.com/KGC-ISU");
+}

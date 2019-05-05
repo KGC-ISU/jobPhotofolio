@@ -5,68 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KGC Portfolio</title>
+    <title>Document</title>
 
     <!-- 폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Gothic+A1" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Nanum+Pen+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Nanum+Pen+Script|Noto+Sans+KR" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- JavaScript -->
     <script src="/js/App.js"></script>
+    <script src="/js/Card.js"></script>
 </head>
 
 <body>
-    <div class="visual">
-        <div class="vs-container">
-            <header>
-                <nav>
-                    <ul>
-                        <li>
-                            <img src="/images/coffee.png" alt="커피">
-                            KGC
-                        </li>
-                        <li>소개</li>
-                        <li>숙련도</li>
-                        <li>포트폴리오</li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="intro">
-                <div class="vs-intro-img">
+
+    <header>
+        <div class="hd-container">
+            <nav>
+                <ul>
+                    <li>KGC</li>
+                    <li>소개</li>
+                    <li>숙련도</li>
+                    <li>포트폴리오</li>
+                </ul>
+            </nav>
+
+            <div class="hello">
+                <p>Hello World!</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="wrap">
+            <div class="visual">
+                <div class="visual-img">
                     <img src="/images/coffee.png" alt="커피">
                 </div>
-                <div class="vs-intro-text">
-                    <p class="intro-name">Hello World!</p>
-                    <p class="intro-text">안녕하세요! 개발자 강지민입니다!</p>
+                <div class="visual-text">
+                    <p>NICE TO MEET YOU!</p>
+                    <p>개발자를 꿈꾸는 강지민 입니다.</p>
                 </div>
             </div>
-        </div>
-        <div class="bg_white">
-            <p>언제나 노력하고 최선을 다 합니다</p>
-        </div>
-    </div>
-    <div class="container">
-        <div class="introduce">
-            <div class="bg_white">
-                <p>배푸는 것과 나누는 것을 즐깁니다</p>
-            </div>
-        </div>
-        <div class="myskill">
-            <div class="skill-list">
-                <div class="card">
-                    
+            <div class="intro">
+                <div class="intro-info">
+                    <h2>소갯말</h2>
+                </div>
+
+                <div class="top-text">
+                    <h2>항상 배우고 감사하는 마음가짐!</h2>
+                    <p>무엇이든 대충하지 않고 최선을 다하고, 자만하지 않는 것이 저의 가장 큰 목표입니다.</p>
+                </div>
+
+                <div class="bottom-text">
+                    <h2>나누는 것을 즐겁게!</h2>
+                    <p>현재 저의 꿈은 많은 것을 배우고 익혀서 다른사람에서 나누어 주는 것입니다.</p>
+                    <p>언젠가 적당한 크기의 건물을 사서 무료로 프로그래밍 수업을 받을 수 있는 복지시설을 만들겁니다!</p>
                 </div>
             </div>
-            <div class="bg_white">
-                <p>배우는 것을 즐깁니다</p>
+            <div class="skill">
+                <div class="skill-info">
+                    <h2>프로그래밍 숙련도</h2>
+                </div>
+                <div class="canvas-list">
+                    <div class="box" data-percent="80">
+                        <div class="canvas">
+                            <canvas></canvas>
+                        </div>
+                        <div class="canvas-name">
+                            <p>HTML & CSS</p>
+                        </div>
+                    </div>
+                    <div class="box" data-percent="70">
+                        <div class="canvas">
+                            <canvas></canvas>
+                        </div>
+                        <div class="canvas-name">
+                            <p>JSP</p>
+                        </div>
+                    </div>
+                    <div class="box" data-percent="40">
+                        <div class="canvas">
+                            <canvas></canvas>
+                        </div>
+                        <div class="canvas-name">
+                            <p>JavaScript</p>
+                        </div>
+                    </div>
+                    <div class="box" data-percent="5">
+                        <div class="canvas">
+                            <canvas></canvas>
+                        </div>
+                        <div class="canvas-name">
+                            <p>PHP</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="photofolio">
-            <div class="bg_white">
-                <p>작은일에도 감사합니다</p>
+            <div class="photofolio">
+                <div class="photo-info">
+                    <h2>포토폴리오</h2>
+                </div>
+                <div class="grid-box">
+                    <div class="dunfanet" onclick="dunfa()">
+                        <div class="photo-img">
+                            <div class="img-box">
+                                <h1>DunFa</h1>
+                            </div>
+                        </div>
+                        <div class="photo-name">
+                            <p>던전앤파이터 API 사용 사이트</p>
+                        </div>
+                    </div>
+                    <div class="site-copy" onclick="copySite()">
+                        <div class="photo-img">
+                            <img src="/images/coding.png" alt="카피">
+                        </div>
+                        <div class="photo-name">
+                            <p>생활코딩 카피 사이트</p>
+                        </div>
+                    </div>
+                    <div class="git-hub" onclick="git()">
+                        <div class="photo-img">
+                            <img src="/images/github.png" alt="">
+                        </div>
+                    </div>
+                    <div class="empty">
+                        준비중인 프로젝트
+                    </div>
+                </div>
             </div>
         </div>
     </div>
