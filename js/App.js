@@ -18,6 +18,14 @@ class App {
         console.log(this.p.offsetTop);
         window.addEventListener("scroll", this.scrollHandle.bind(this));
 
+        this.visualSection = document.querySelector(".visual");
+        window.addEventListener("resize", this.resizeHandle.bind(this));
+        this.resizeHandle();
+    }
+
+    resizeHandle(e){
+        let height = window.innerHeight - 80;
+        this.visualSection.style.height = height + 'px';
     }
 
     scrollHandle(e) {
