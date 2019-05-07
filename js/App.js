@@ -21,6 +21,18 @@ class App {
         this.visualSection = document.querySelector(".visual");
         window.addEventListener("resize", this.resizeHandle.bind(this));
         this.resizeHandle();
+
+        this.navList = document.querySelectorAll(".nav-container nav ul li");
+        this.navList.forEach(x => {
+            x.addEventListener("click", this.navScrollHandle.bind(this));
+        });
+
+        this.intro = document.querySelector(".intro-info");
+        this.skill = document.querySelector(".skill-info");
+    }
+
+    navScrollHandle(e) {
+        document.getElementsByClassName("intro-info").scrollIntoView();
     }
 
     resizeHandle(e){
