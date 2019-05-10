@@ -3,8 +3,6 @@ class App {
 
         let list = document.querySelectorAll(".canvas-list .box");
 
-        console.log(list);
-
         this.cardList = [];
 
         list.forEach(x => {
@@ -15,7 +13,6 @@ class App {
 
         this.isDrawed = false;
         this.p = document.querySelector(".skill");
-        console.log(this.p.offsetTop);
         window.addEventListener("scroll", this.scrollHandle.bind(this));
 
         this.visualSection = document.querySelector(".visual");
@@ -27,12 +24,56 @@ class App {
             x.addEventListener("click", this.navScrollHandle.bind(this));
         });
 
-        this.intro = document.querySelector(".intro-info");
-        this.skill = document.querySelector(".skill-info");
+        this.hello = document.querySelector(".hello p");
+        this.hello.addEventListener("click", this.sweetAlert.bind(this));
+
+        this.goto = document.querySelector(".goto-top");
+        $(this.goto).stop().on("click", this.gotoHeadHandle.bind(this));
+        
+        window.addEventListener("scroll", this.gotoHead.bind(this));
+
+    }
+
+    gotoHeadHandle(e) {
+        $("html, body").animate({
+            scrollTop : 0
+        }, 700);
+    }
+
+    gotoHead(e) {
+        
+        let scroll = $(document).scrollTop();
+        
+        if(scroll > 80) {
+            $(this.goto).stop().addClass("active");
+        } else {
+            $(this.goto).stop().removeClass("active");
+        }
+
+    }
+
+    sweetAlert(e) {
+        swal({
+            title: "반가워요!",
+            text: "overnice2020@gmail.com",
+            icon: "success",
+            button: "닫기",
+          });
     }
 
     navScrollHandle(e) {
-        document.getElementsByClassName("intro-info").scrollIntoView();
+        let target = e.target.dataset.target;
+
+        if(target == null) {
+            return;
+        }
+
+        let top = document.querySelector("." + target);
+
+        $("html, body").stop().animate({
+            scrollTop : top.offsetTop - 50
+        }, 700);
+        
     }
 
     resizeHandle(e){
